@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """
-#!/usr/bin/python3
-"""
 Contains the FileStorage class
 """
 
@@ -72,7 +70,7 @@ class FileStorage:
         self.reload()
 
     def get(self, cls, id):
-        """retrieves an object in the storage"""
+        """retrieves one object in the storage"""
         if cls and id:
             obj = self.all(cls).get("{}.{}".format(cls.__name__, id), None)
             return obj
