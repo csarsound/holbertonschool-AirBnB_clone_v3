@@ -78,7 +78,8 @@ class DBStorage:
     def get(self, cls, id):
         """Retrieves one Object in the database"""
         if cls and id:
-            return self.__session.query(cls).filter_by(id=id).first()
+            obj = self.__session.query(cls).filter_by(id=id).first()
+            return obj
         return None
 
     def count(self, cls=None):
